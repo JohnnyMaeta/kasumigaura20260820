@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>みなさんの振り返り｜みんなで定時に帰るAI活用術（2026年8月20日）</title>
+<link rel="stylesheet" href="../shiryo/shiryo.css">
+<style>
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 0 0 24px; }
+  .stat { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .stat .n { font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1.2; display: block; }
+  .stat .l { font-size: .82rem; color: var(--muted); }
+  .rank { list-style: none; padding: 0; margin: 0 0 12px; counter-reset: r; }
+  .rank li { counter-increment: r; position: relative; padding: 10px 0 10px 42px; border-bottom: 1px solid var(--line); }
+  .rank li:last-child { border-bottom: 0; }
+  .rank li::before {
+    content: counter(r); position: absolute; left: 0; top: 12px;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    font-size: .82rem; font-weight: 700; text-align: center; line-height: 26px;
+  }
+  .rank strong { display: block; }
+  .rank span { font-size: .89rem; color: var(--muted); }
+  .wall { border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 0 0 14px; }
+  .wall h3 { margin: 0 0 4px; font-size: .98rem; color: inherit; }
+  .wall p { margin: 0; font-size: .9rem; }
+  .wall .voice { display: block; margin-top: 6px; font-size: .86rem; color: var(--muted); }
+  .filterbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 0 0 12px; }
+  .filterbar input {
+    flex: 1 1 220px; min-width: 0;
+    padding: 9px 12px; font-size: .9rem;
+    border: 1px solid var(--line); border-radius: 8px;
+    background: var(--bg); color: var(--ink);
+    font-family: inherit;
+  }
+  .filterbar .count { font-size: .84rem; color: var(--muted); white-space: nowrap; }
+  #gtable { font-size: .84rem; }
+  #gtable th:first-child, #gtable td:first-child { min-width: 150px; }
+  #gtable td { min-width: 160px; }
+  .empty { color: var(--muted); }
+  .anon { font-size: .82rem; }
+  .infographic { margin: 0 0 28px; }
+  .infographic img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--line); border-radius: 10px;
+  }
+  .infographic figcaption { font-size: .84rem; color: var(--muted); margin-top: 8px; }
+  @media (max-width: 600px) { #gtable { font-size: .8rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="../">← おみやげワークのページに戻る</a>
+
+<header class="doc">
+  <p class="kind">令和8年度 茨城県県南小中学校教務主任会研修会（2026年8月20日）</p>
+  <h1>みなさんの振り返り</h1>
+  <p class="sub">「スーパー記録くん」で集まった73件を、そのままAIに読ませて整理したものです／前多昌顕</p>
+</header>
+
+<p class="fake anon">
+  <strong>お名前は伏せてあります。</strong>グループ名に個人のお名前が入っていたものは「お名前グループ①〜⑤」に、学校名が入っていたものは「◯◯小」等に置き換えました。市町村名は、みなさんがご自分で名乗られたものなのでそのまま残しています。中身の言葉は変えていません。
+</p>
+
+<div class="toolbar">
+  <button class="copy-btn">📋 まとめ本文をコピー</button>
+</div>
+
+<div class="docbody" id="body">
+
+<p class="lead-doc">暑い体育館で、最後までおつきあいいただきありがとうございました。締めの1枚のQRから、5分ほどの間に73件も届きました。<strong>ひとつも捨てずに全部AIに読ませて</strong>、下のとおり整理しました。会が終わってから数時間でこの形になっています——これ自体が、講演でお話しした「作業はAIに任せられる」の実物です。</p>
+
+<div class="stats">
+  <div class="stat"><span class="n">73</span><span class="l">届いた振り返り</span></div>
+  <div class="stat"><span class="n">68 / 5</span><span class="l">音声 / テキスト</span></div>
+  <div class="stat"><span class="n">約5分</span><span class="l">送信が集中した時間帯</span></div>
+  <div class="stat"><span class="n">数十秒</span><span class="l">AIが整理にかけた時間</span></div>
+</div>
+
+<figure class="infographic">
+  <a href="../koe/summary.jpg" target="_blank" rel="noopener">
+    <img src="../koe/summary.jpg" alt="振り返りのまとめ（インフォグラフィック）：ワクワク活用アイデアと、乗り越えたい壁" loading="lazy">
+  </a>
+  <figcaption>73件をAIに読ませて、そのまま1枚にしてもらったものです（Gemini Notebookの作図機能）。押すと大きく表示されます。<strong>これも人の手は入っていません。</strong></figcaption>
+</figure>
+
+<h2>1　すぐ使ってみたい、と挙がったもの</h2>
+
+<ol class="rank">
+  <li><strong>保護者面談・三者面談の予約管理</strong><span>いちばん多く挙がりました。紙でやっていた日程調整を電子化すると、担任の先生の事務作業が大きく減る、という受け止めです。</span></li>
+  <li><strong>Googleカレンダーでの予定管理・共有</strong><span>個人の予定だけでなく、週予定・月予定・年間行事をリンクさせて一元管理したい、という声。「1か所変えれば全部に反映される」ことに手応えを感じていただけたようです。</span></li>
+  <li><strong>学校評価アンケートの作成・分析</strong><span>校長の方針や学校の方針と整合しているかをAIで確かめる、あるいは項目そのものを作らせる。「すぐに実務に応用できそう」という反応が多くありました。</span></li>
+  <li><strong>生成AIでの文書作成</strong><span>指導案の検索・添削、通知文の作成など。<strong>「難しいことはまずAIに作ってもらい、そこから直せばいい」</strong>という手順が分かって苦手意識が薄れた、という声がありました。</span></li>
+  <li><strong>話し合いの記録・可視化（スーパー記録くん）</strong><span>職員会議やグループワークの記録に。プリントだけで評価していた対話の中身を拾えるのでは、という具体的な使い道が挙がりました。</span></li>
+</ol>
+
+<p>講演では触れなかった用途として、<strong>外国籍の児童・保護者に向けた多言語の通知・文書づくり</strong>が複数のグループから挙がりました。県南ならではの実情だと思います。翻訳は生成AIがいちばん確実に得意な仕事のひとつなので、ここは早く効きます。</p>
+
+<h2>2　挙げていただいた「壁」</h2>
+
+<p>ここがいちばんありがたい部分でした。以下は、複数のグループから重なって出てきたものです。</p>
+
+<div class="wall">
+  <h3>① Microsoft環境・既存の校務支援システムとの併存</h3>
+  <p>いちばん多く挙がった不安です。市町村のデフォルトがOutlookやExcel、あるいは校務支援システムであるため、Googleのカレンダーやフォームを併用すると二重入力になる、セキュリティ制限で使えない、という声。</p>
+  <span class="voice">「支援システム・Excel・カレンダーの3か所に同じことを入力している」「市の制限でGoogleが使えない」</span>
+</div>
+
+<div class="wall">
+  <h3>② 面談予約の「早い者勝ち」問題</h3>
+  <p>完全に先着順で自動化すると、日中に仕事をしている保護者が不利になり、クレームにつながるのではないか——という懸念。予約開始時刻の公平性をどう担保するか、という論点です。</p>
+  <span class="voice">「即時に予約が決まってしまうと、教員側の調整の余地がなくなる」</span>
+</div>
+
+<div class="wall">
+  <h3>③ きょうだい・個別事情の調整</h3>
+  <p>兄弟姉妹が同じ学校にいる場合の連続枠、特定の保護者同士の間隔を空けたい、といった細かい調整をシステム上でどう扱うか。大規模校ほど切実、という声でした。</p>
+</div>
+
+<div class="wall">
+  <h3>④ 属人化と、異動したあとのメンテナンス</h3>
+  <p>「得意な人が作った仕組みは便利だが、その人が他校に異動したあと誰が直すのか」。使い方の平準化をどうするか、という維持管理の問題です。</p>
+  <span class="voice">「一度作れば後が楽になる仕組みにしたいが、属人化が怖い」</span>
+</div>
+
+<div class="wall">
+  <h3>⑤ 説明のスピードが速かった</h3>
+  <p>「ついていけなかった」「キャパオーバーだった」「画面の情報量が多かった」。グループ名そのものが「チームついていけなかった」だった班もありました。<strong>これは完全に話し手の側の問題です。申し訳ありませんでした。</strong>だからこそ、このページと動画を置いてあります。涼しいところで、ゆっくり試してください。</p>
+</div>
+
+<h2>3　研修そのものへのご意見</h2>
+
+<ul>
+  <li><strong>事後の資料がありがたかった</strong>——「その場では操作が追いつかなかったが、あとから動画とマニュアルでじっくり復習できるのが助かる」というお声を複数いただきました。このページは消しませんので、必要なときに戻ってきてください。</li>
+  <li><strong>この種の研修は、行政が主体でやるべきだ</strong>——という前向きなご意見もいただきました。ありがとうございます。</li>
+  <li><strong>校内のICTが得意な先生や支援員と一緒に、少しずつ進めたい</strong>——という声が多くありました。これが正しい進め方だと思います。ひとりで全部やる必要はありません。</li>
+</ul>
+
+<div class="note-after">
+  <p>講演でお伝えしたことを、もう一度だけ。<strong>まずは学校全体を変えようとしないでください。</strong>自分の仕事の、誰にも迷惑がかからないところだけを自動化する。そこで生まれた余白で、はじめて学校全体のことを考える。順番が逆だと続きません。</p>
+</div>
+
+<h2>4　グループ別の一覧（66グループ）</h2>
+
+<p>いただいた73件を、グループごとに66行へ整理した表です（同じグループ名で複数回送っていただいたものは1行にまとめました）。<strong>他の学校が何に困っていて、何から手を付けようとしているか</strong>が見えます。自校と同じ悩みのグループを探してみてください。</p>
+
+<div class="filterbar">
+  <input type="search" id="q" placeholder="キーワードで絞り込む（例：面談　カレンダー　Microsoft）" aria-label="キーワードで絞り込む">
+  <span class="count" id="count"></span>
+</div>
+
+<div class="tablescroll">
+<table id="gtable">
+<thead>
+<tr><th>グループ</th><th>現状・課題</th><th>使ってみたいもの</th><th>壁・懸念</th><th>めざす姿</th></tr>
+</thead>
+<tbody>
+<tr><td>龍ケ崎グループ1</td><td>同じ内容を支援システム、Excel、カレンダーなど3か所に重複入力しており手間がかかっている。</td><td>Gemini、音声入力、メールからのスケジュール自動抽出、Googleフォーム作成。</td><td>重複入力の煩雑さ、AIを使いこなすための操作習熟。</td><td>1回の入力で全システムへ同期し、転記作業を削減して余白を生む。</td></tr>
+<tr><td>元気百倍アンパンマン＆いたずら大好きバイキンマン</td><td>アンケート結果の集約が手作業で非常に面倒。ベテラン教員にも分かりやすく整理する必要がある。</td><td>文字起こし分析、スプレッドシートでのAI活用、面談計画・通知の自動印刷、フォーム回答の自動集約。</td><td>自分で設定・運用できるかという不安、IT不慣れな教員への配慮と共有の難しさ。</td><td>集約作業の自動化、面談準備や書類作成事務の効率化。</td></tr>
+<tr><td>お名前グループ①</td><td>面談予約の調整に時間がかかる（フォーム回答を手動で組み合わせている）。早い者勝ちによる不公平感。</td><td>Gemini（アンケート作成、テキスト化）、面談予約の自動化ツール。</td><td>保護者からのクレーム（仕事中の人が不利等）、即時予約決定への抵抗（教員側の調整余地）。</td><td>アンケート作成の簡略化、面談日程調整の自動化による時間削減。</td></tr>
+<tr><td>いしおかみのりくんグループ</td><td>三者面談の予約調整やアンケート作成の事務負担、プロンプト作成能力の不足。</td><td>Googleフォーム（面談予約）、Gemini Notebook、Gemini（アンケート項目修正）。</td><td>教員のITスキル差、少人数学級での導入コストに対する迷い。</td><td>担任の負担軽減（10分でも短縮）、校務の質向上、事務作業の効率化。</td></tr>
+<tr><td>チームついていけなかった</td><td>AIの進化や活用スピードについていけず、業務負担が大きい。重要性は理解しているが活用が追いつかない。</td><td>AIによる文章・週案作成、面談予約システムの自動化、AIによる代筆。</td><td>システム構築の技術的な壁、学校全体への定着・浸透における周囲からの反発。</td><td>業務の改善・軽減、定時退勤の実現。</td></tr>
+<tr><td>グループ1</td><td>紙ベースの業務（面談予約・連絡・週案）が多く二重の手間が発生。ICT導入への反対意見や保護者への伝達不足。</td><td>Googleフォーム（面談予約）、Gemini、Googleカレンダー、スクリレ（連絡ツール）。</td><td>ICT活用への根強い反対意見、紙文化を好む層の存在、操作や集計・振り分け方法への不安。</td><td>面談予約の効率化、校務負担の軽減、業務のデジタル化によるスピード向上。</td></tr>
+<tr><td>12グループ</td><td>面談予約での兄弟関係の調整、週案作成の負担。MicrosoftとGoogle環境の混在による制約。</td><td>面談システム、Gemini Notebook、AIによる週案作成、Googleツールの再利用機能。</td><td>兄弟のスケジュール調整の難しさ、学校現場におけるGoogleツールの利用制限。</td><td>面談予約の効率化、週案作成の自動化・効率化。</td></tr>
+<tr><td>◯◯小には土俵がある</td><td>外国籍の保護者が多く紙のやり取りが困難。共働き家庭との面談予約調整（早い者勝ち管理）が難しい。</td><td>面談予約システム、多言語対応の案内作成。</td><td>予約開始時間の公平性確保、外国籍保護者への対応の難しさ。</td><td>教員・保護者双方の利便性向上、面談調整の効率化、多言語によるスムーズな連携。</td></tr>
+<tr><td>利根・守谷組</td><td>保護者面談の予約調整（時間の重複、希望の集中、兄弟姉妹の連続性配慮）が困難。</td><td>GAS（Google Apps Script）を活用した面談予約システム。</td><td>公平性の問題、兄弟枠の自動調整などの高度なカスタマイズの可否。</td><td>スマホ予約による利便性向上、集計業務の簡略化、柔軟な時間調整。</td></tr>
+<tr><td>たけまる（仮）</td><td>自治体によって導入ツール（Microsoft／Google）が異なり、研修内容を自校で再現しにくい。</td><td>Gemini等のAI機能、自治体間でのツール統一。</td><td>所属自治体でGoogleが未導入、Microsoftとの仕様差による技術的な混乱。</td><td>ツール統一による業務効率化、研修内容を即座に実務へ反映できる体制。</td></tr>
+<tr><td>千千千グループ</td><td>週の予定入力が煩雑（Excelからスプレッドシートへの転記）。視認性と手間の課題。</td><td>APIを活用したアプリ開発、Googleカレンダーへの情報集約、入力インターフェース作成。</td><td>プログラミング（GAS等）の学習コスト、情報の集約先（カレンダーかシートか）の選択。</td><td>入力作業の効率化、情報の統合管理、操作性向上による負担軽減。</td></tr>
+<tr><td>ピザ食べたい</td><td>校務システムと週案への二重入力が発生している。</td><td>Googleカレンダーと校務システムの連携、AIによる自動転記・入力代行。</td><td>デジタルファイル間、あるいは紙媒体への反映・連携における技術的仕様。</td><td>二重入力の負担解消、転記作業の自動化による業務効率化。</td></tr>
+<tr><td>藤南学区</td><td>予定変更時に紙の週案や予定表を個別に書き直す二度手間が発生している。</td><td>Googleカレンダーとの連携、予定表の自動更新・共有。</td><td>新しいツールの使い方を覚えることへの心理的・時間的負担。</td><td>1か所の修正が全てに反映される効率化、ツールに任せることによる負担軽減。</td></tr>
+<tr><td>スーパースーパーとりでくん</td><td>面談予約後の教員側の都合（空き時間確保）や、大規模校における兄弟関係の調整が難しい。</td><td>面談予約システム。</td><td>教員側での時間入れ替えや、複雑な調整がシステム上で可能かどうか。</td><td>効率的な面談スケジュール管理と調整業務の負担軽減。</td></tr>
+<tr><td>夏祭りグループ</td><td>学校評価アンケートと方針の照らし合わせ、資料作成の負担。</td><td>Canva、Gemini Notebook、アンケート分析・方針照合。</td><td class="empty">—</td><td>資料作成の迅速化、アンケート分析業務の効率化。</td></tr>
+<tr><td>かっぱのキューちゃん</td><td>学校評価アンケートの分析、整合性の確認、作成管理。</td><td>Gemini、Gemini Notebook（アンケート整合性確認）。</td><td class="empty">—</td><td>アンケート業務の効率化と精度の向上。</td></tr>
+<tr><td>つくばつくばつくばつらい</td><td>業務量がキャパオーバーで自身の技能も不足している。校務システムとの併用課題。</td><td>AIの練習、音声（MP3）の活用、Googleツール。</td><td>操作や活用のための技量不足、スキルの欠如。</td><td>夏休み中のスキルアップ、システム併用による業務の使いこなし。</td></tr>
+<tr><td>26グループ</td><td>校務システムとGoogleカレンダーの連携、セキュリティ制限による場所の制約。</td><td>Googleカレンダー、面談予約システム、写真撮影によるデータ入力自動化。</td><td>セキュリティ上の制約、手動でのデータ流し込みの手間。</td><td>スケジュール管理の一元化、入力作業の簡略化・自動化。</td></tr>
+<tr><td>TMN</td><td>Microsoft環境を使用。AIを活用しない非効率な業務や、自身のアレンジ方法に苦慮。</td><td>Gemini、Googleカレンダー、アンケートの作成・集約・分析。</td><td>Microsoft環境からの移行、AI活用が進まない教員への浸透。</td><td>アンケート分析等の効率化、スキル向上。</td></tr>
+<tr><td>グループA2</td><td>行事計画や週案をExcelからのコピペで作成しており、連携の手間がかかる。</td><td>行事計画・月予定・週案の自動連携（リンク）、Google関連ツール。</td><td>Microsoft製品からAI活用に適したGoogle環境への移行・適応。</td><td>市の方針の迅速な反映、書類作成の効率化。</td></tr>
+<tr><td>29のグループ</td><td>AIの仕組みやコード作成が自力では困難。Microsoft環境メインでGoogleを未活用。</td><td>AIによるコード生成、Googleフォーム、スプレッドシート拡張機能。</td><td>導入手順の難易度、スプレッドシートへの移行に対する心理的・技術的障壁。</td><td>自分でやり方を考えず、AIに任せることによる業務改善。</td></tr>
+<tr><td>チームどーほー</td><td>グループワークの対話評価において、発言内容を把握しきれずプリントのみの評価になっている。</td><td>録音・録画機能（AIによる要約・まとめ）。</td><td class="empty">—</td><td>子どもたちの対話内容の振り返り、評価業務の効率化。</td></tr>
+<tr><td>小中合同グループ</td><td>AI未活用。外国籍の児童・保護者対応で本国言語の文書作成が必要。</td><td>翻訳機能、業務全般に活用可能なAIツール。</td><td>AIに対する信頼性（使い始める段階）。</td><td>多言語対応の円滑化、および業務全般の効率化。</td></tr>
+<tr><td>明けゆく常陸_うれし</td><td>文章で届く予定情報をExcelに手入力しており、手間とミスのリスクがある。</td><td>Googleカレンダーとの連携、文章読み込みによる自動予定反映。</td><td>最初の設定・準備にかかる時間、システム変更への負担感。</td><td>準備時間の短縮、入力ミスの解消、業務の効率化。</td></tr>
+<tr><td>龍ケ崎B</td><td>特定の担当者に依存したシステム運用（属人化）への懸念。</td><td>Googleツール（横展開が可能なもの）。</td><td>作成者が異動した後のメンテナンス、使い方の平準化。</td><td>業務の平準化、一度作成すれば後が楽になる仕組みの構築。</td></tr>
+<tr><td>ちべんわかやま</td><td>教務主任としての業務過多により、退勤時間が遅い。</td><td>ICTの活用（全般）。</td><td>ICT支援員の不足、人材不足、現状の業務量。</td><td>定時退勤（5時〜5時半）の実現、業務負担の軽減。</td></tr>
+<tr><td>もりヤーズ</td><td>文化祭の分析業務や手動の連絡業務が負担。</td><td>スーパー記録くん、面談システム、拡張機能（アプリ実行等）。</td><td>課金の必要性、システム拡張に関する技術的な設定。</td><td>行事分析の迅速化、面談予約の自動化。</td></tr>
+<tr><td>あみグループ</td><td>既存のExcel等は整っているが、生成AIの活用は未着手だった。</td><td>生成AI（Gemini等）への相談、Googleカレンダー。</td><td>既存システムとの使い分け、新しいツールの導入判断。</td><td>生成AIへの問いかけによる、想像を超えた業務効率化の実現。</td></tr>
+<tr><td>かしわもち</td><td>Microsoft環境（Outlook等）でのカレンダー連携が可能か不透明。</td><td>カレンダー連携機能、Microsoft Copilot、Googleツール。</td><td>自身のMicrosoft環境でGoogle系機能が同様に使えるかという不安。</td><td>帰宅後のカレンダー連携機能の活用。</td></tr>
+<tr><td>お名前グループ⑤</td><td>生成AIへの心理的ハードルがあり、活用できていなかった。</td><td>生成AI（全般）。</td><td>活用への心理的ハードル。</td><td>今後の業務効率の向上。</td></tr>
+<tr><td>迷える子羊</td><td>グランドデザイン変更に伴う学校評価項目の作り直し。</td><td>Gemini（学校評価項目作成）、Googleツール（面談予約）。</td><td class="empty">—</td><td>大変な作業の自動化、他校事例の取り入れ。</td></tr>
+<tr><td>にいはりれんこん</td><td>スケジュール機能の活用が難しいと感じている。</td><td>保護者アンケート・面談予約、週案・月案の合体機能。</td><td>操作難易度。</td><td>事務作業（週案等）の効率化、AI実践の着実な進展。</td></tr>
+<tr><td>県南卓球専門部</td><td>GoogleとMicrosoftのツール間連携がうまくいかない。</td><td>面談予約機能、Microsoftツールとの連動。</td><td>システム間の連携の難しさ、Microsoftアカウントの活用方法。</td><td>プラットフォームを跨いだスムーズな連携、利便性の向上。</td></tr>
+<tr><td>ニラレバ定食ニラレバ抜き</td><td>操作画面の情報量が多く、説明のスピードについていけない。</td><td>提供資料に基づく興味深い機能（全般）。</td><td>画面の複雑さ、リテラシーの課題、説明スピードへの追随。</td><td>資料を活用したツールの習得と実務への活用。</td></tr>
+<tr><td>44のグループ</td><td>予定の見通しが立てにくい。市の制限によりAI活用に制約がある。</td><td>カレンダー機能を活用した予定管理、年間計画と週案のリンク。</td><td>自治体のセキュリティ制限・使用制限、技術的な制約。</td><td>予定の見通し確保、業務の効率化。</td></tr>
+<tr><td>朝ごはん納豆、キーマカレー</td><td>情報の集約化が不十分。</td><td>Gemini Notebook、Googleカレンダーによる情報の一元化。</td><td class="empty">—</td><td>情報の一元管理による業務効率化。</td></tr>
+<tr><td>ｈｂｖｊｆｈしおうｓｄｆひお</td><td>予定をアナログ（手帳）で管理しており、書く作業が大変。</td><td>Googleカレンダー、週予定と月予定の統合機能。</td><td class="empty">—</td><td>手書き負担の軽減、デジタルでの統合管理。</td></tr>
+<tr><td>のんたん</td><td>面談予約の早い者勝ちシステムによる不公平感。</td><td>AIによる面談自動振り分け機能、資料作成・共有。</td><td>クレームの懸念。</td><td>面談調整の自動化、資料活用による確認の容易化。</td></tr>
+<tr><td>お名前グループ③</td><td>ICTが苦手で説明の理解が追いつかない。カレンダー連携も未着手。</td><td>学校評価アンケート、面談日程作成、Googleカレンダー連携。</td><td>技術不足、苦手意識。</td><td>同僚から学びつつ、アンケートや日程管理を効率化する。</td></tr>
+<tr><td>お名前グループ④</td><td>Googleカレンダー活用に困難を感じている。</td><td>学校評価アンケートのまとめ機能。</td><td>操作への習熟不足。</td><td>アンケート集計・まとめ業務の効率化。</td></tr>
+<tr><td>県南のすみっコから</td><td>手順が難しいものが多く、活用が一部に留まっている。</td><td>Gemini（より良い使い方、具体的な手順習得）。</td><td>操作手順の難易度。</td><td>実践的な活用方法を学び、少しずつ取り入れる。</td></tr>
+<tr><td>チームついていけなかった（個人）</td><td>記録業務の負担、記録の振り返り。</td><td>記録用AIツール（スーパー記録くん）、入力情報の文字化・振り返り機能。</td><td>コスト面（無料かどうか）、使い勝手の確認。</td><td>記録業務の効率化、入力内容の自動振り返り。</td></tr>
+<tr><td>グループH</td><td>Googleカレンダーを十分に活用しきれていない。</td><td>Googleカレンダーの有効活用。</td><td>技術・知識の不足。</td><td>できるところから活用を始め、業務時間を短縮する。</td></tr>
+<tr><td>グループフルート</td><td>事務作業（手打ち等）に時間を取られ、業務上の余白がない。</td><td>AIを活用した文章作成、Googleフォーム。</td><td>AI操作への不慣れ（慣れる必要がある段階）。</td><td>事務作業を効率化し、時間に余白を作ること。</td></tr>
+<tr><td>わかりやすい名前</td><td>内容が難しく、現在の業務への取り入れ方に限界を感じている。</td><td>具体例として示された機能。</td><td>内容の難易度、現場活用の限界。</td><td>AIでできる可能性を探り、実務に反映させる。</td></tr>
+<tr><td>冷房体育館大好き！</td><td>研修スピードが速く、内容についていけなかった。</td><td class="empty">—</td><td>操作・説明スピードへの不安。</td><td>復習による理解、仕事への意欲向上。</td></tr>
+<tr><td>お名前グループ②</td><td>学校アンケートの処理負担。</td><td>学校アンケートへのAI活用。</td><td class="empty">—</td><td>アンケート業務の効率化と他業務への展開。</td></tr>
+<tr><td>沖縄行きたい</td><td>アンケートのフォーム作成時、手打ち作業が面倒。</td><td>AIを活用したアンケート作成機能。</td><td>操作の難しさ。</td><td>手打ち作業の解消、実務での実践。</td></tr>
+<tr><td>本能寺の変</td><td>AIツールの使い方がよくわからない。</td><td>Gemini Notebook。</td><td>知識不足。</td><td>アウトプットへの活用、まずは使い始めること。</td></tr>
+<tr><td>がんばります</td><td>面談のスケジュール調整負担。</td><td>Googleカレンダー（予約機能）。</td><td>保護者の入力ミスへの懸念。</td><td>担任の負担軽減（楽になること）。</td></tr>
+<tr><td>TEAM_いなのすけ</td><td>学校行事と私事の調整、子どもの実態把握。研修画面が小さく見づらかった。</td><td>Googleカレンダー一括管理、フォーム自動作成。</td><td>研修環境による情報の受け取りにくさ。</td><td>公私のスケジュール管理の効率化、実態把握の深化。</td></tr>
+<tr><td>あいうえおグループ</td><td>発言内容の集約。</td><td>音声の文字起こし機能。</td><td class="empty">—</td><td>校内でのAI活用試行。</td></tr>
+<tr><td>50グループ</td><td>文字起こしデータの活用。</td><td>入力情報の文字化・振り返り機能。</td><td class="empty">—</td><td>入力内容の自動振り返り。</td></tr>
+<tr><td>個人（Microsoft利用）</td><td>Google環境での再現性を模索。</td><td>Googleカレンダーへの予定同期。</td><td>ネットワーク接続環境。</td><td>予定管理の自動化・効率化。</td></tr>
+<tr><td>ナエバ</td><td>情報共有やスキル習得の場の不足。</td><td>行政主導によるIT・AI研修。</td><td>行政レベルでの研修体制の不足。</td><td>教職員全体の活用レベルの底上げ。</td></tr>
+<tr><td>旧みどりの力</td><td>ツールが統一されていないことによる非効率。</td><td>Googleカレンダー、Googleツール全般。</td><td>組織全体での導入、全員が使いこなせるか。</td><td>業務の簡略化、異動時の負担軽減。</td></tr>
+<tr><td>さくらがわ・あずま</td><td>業務負担の軽減が必要。</td><td>AI全般。</td><td class="empty">—</td><td>業務の削減、困難な課題の解決。</td></tr>
+<tr><td>QurviA（クルヴィア）</td><td>面談予約シートでのトラブル発生。</td><td>面談予約シートの作成。</td><td class="empty">—</td><td>トラブル回避とスムーズな運用。</td></tr>
+<tr><td>KSG</td><td>Googleカレンダーとの連携不備。</td><td>Googleカレンダー（AI連携）。</td><td>接続・設定上の問題。</td><td>業務の利便性向上。</td></tr>
+<tr><td>八郷</td><td>既存のシステム（デフォルト）がある。</td><td>今日の研修内容。</td><td>既存環境との兼ね合い。</td><td class="empty">—</td></tr>
+<tr><td>しんとね</td><td>ICT活用への苦手意識。</td><td class="empty">—</td><td>操作への不安、習熟への努力。</td><td class="empty">—</td></tr>
+<tr><td>あいうえお</td><td class="empty">—</td><td>本校での試行。</td><td class="empty">—</td><td class="empty">—</td></tr>
+<tr><td>みらい市</td><td>新しいツールへの抵抗感。</td><td class="empty">—</td><td>インターフェースへの慣れ。</td><td>導入の円滑化。</td></tr>
+<tr><td>おばみな</td><td>校務システムとGoogleの併用。</td><td class="empty">—</td><td>二つのシステムの使い分けの困難さ。</td><td class="empty">—</td></tr>
+<tr><td>リアップX5X5</td><td>情報不足。</td><td class="empty">—</td><td class="empty">—</td><td>研修内容の活用。</td></tr>
+<tr><td>我々のコリブリ</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td><td>AIが重要なアイテムであるという認識。</td></tr>
+</tbody>
+</table>
+</div>
+
+<p style="font-size:.84rem;color:var(--muted)">※ 表は、いただいた音声・テキストをAIが要約したものです。同じグループ名で複数回送っていただいたものは1行にまとめています。言い回しはAIの整理によるもので、発言そのままではありません。</p>
+
+<h2>5　このページの作り方</h2>
+
+<p>タネ明かしです。手順はこれだけでした。</p>
+
+<ol>
+  <li>スーパー記録くんに集まった<strong>73件の音声・テキストを、そのままGemini Notebookに放り込む</strong>（1件ずつ聞いてはいません）。</li>
+  <li>「参加者の声を、前向きな期待・導入の課題・研修への評価に分類して整理して」と頼む。</li>
+  <li>「グループごとに、現状の課題／使いたいツール／懸念／目標の4列の表にして」と頼む。</li>
+  <li>できた文章と表を、そのままこのページに流し込む。</li>
+</ol>
+
+<p>講演でお話しした<strong>「AIの使いどころは作文ではなく、突合と転記」</strong>が、まさにこれです。73件を人間が聞き取って分類したら、丸一日仕事でしょう。<strong>校内研修の感想、学校評価アンケートの自由記述、行事の反省——全部これでいけます。</strong></p>
+
+<div class="note-after">
+  <p>使ったアプリと手順は、<a href="../">おみやげワークのページ</a>にすべて置いてあります。スーパー記録くんの導入動画もそちらです。</p>
+</div>
+
+</div>
+
+<footer class="doc">
+  <p>令和8年度 茨城県県南小中学校教務主任会研修会「みんなで定時に帰るAI活用術」／前多昌顕（Google認定トレーナー）<br>
+  お名前・学校名は伏せてあります。掲載を取り下げてほしい箇所があれば、遠慮なくお知らせください。すぐに消します。</p>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var q = document.getElementById('q');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#gtable tbody tr'));
+  var count = document.getElementById('count');
+  function render() {
+    var word = (q.value || '').trim().toLowerCase();
+    var shown = 0;
+    rows.forEach(function (row) {
+      var hit = !word || row.textContent.toLowerCase().indexOf(word) !== -1;
+      row.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    count.textContent = shown + ' / ' + rows.length + ' 件';
+  }
+  q.addEventListener('input', render);
+  render();
+
+  var btn = document.querySelector('.copy-btn');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var text = document.getElementById('body').innerText;
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = '✓ コピーしました';
+        btn.classList.add('done');
+        setTimeout(function () { btn.textContent = '📋 まとめ本文をコピー'; btn.classList.remove('done'); }, 2000);
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
